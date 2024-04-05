@@ -21,7 +21,7 @@ describe('My profile page', () => {
         await expect(MyProfilePage.fieldAddress).toHaveText(MyProfilePage.userData.address)
         await expect(MyProfilePage.fieldPhone).toHaveText(MyProfilePage.userData.phone)
 
-        await expect(MyProfilePage.fieldSupportPin).toHaveText(MyProfilePage.userData.supportpin)   
+        await expect(MyProfilePage.fieldSupportPin).toHaveText(MyProfilePage.userData.supportpin)
         if (MyProfilePage.userData.newsletter) {
             await expect(MyProfilePage.checkboxNewsletter).toBeChecked();
         } else {
@@ -29,4 +29,3 @@ describe('My profile page', () => {
         }
     })
 })
-

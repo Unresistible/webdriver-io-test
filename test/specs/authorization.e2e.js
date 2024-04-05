@@ -34,9 +34,8 @@ describe('Authorization page', () => {
         await AuthorizationPage.inputPassword.setValue('some wrong pasw')
         await AuthorizationPage.btnShowPassword.click()
         await expect(AuthorizationPage.inputPassword).toHaveAttr('type', 'text')
-        
+
         await AuthorizationPage.inputEmail.setValue('wrong@@email.com')
         await expect(AuthorizationPage.tooltipError).toHaveText(expect.stringContaining('Uh oh! This', 'isn’t an email'))
     })
 })
-
